@@ -1,0 +1,21 @@
+[build]
+  # This is for the web dashboard only
+  # The main backend API will be deployed separately
+  publish = "."
+  command = "echo 'AI Coach Dashboard - Static files ready'"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://ai-coach-api.herokuapp.com/api/:splat"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Static file serving for dashboard
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"

@@ -4,7 +4,7 @@ import AVFoundation
 struct WorkoutView: View {
     @StateObject private var cameraManager = CameraPipeline()
     @StateObject private var healthManager = HealthKitManager.shared
-    @StateObject private var poseEstimator = PoseEstimator()
+    @StateObject private var poseEstimator = ApplePoseEstimator()
     @StateObject private var featureExtractor = FeatureExtractor()
     @StateObject private var repCounter = RepCounter()
     @StateObject private var coachingEngine = CoachingEngine()

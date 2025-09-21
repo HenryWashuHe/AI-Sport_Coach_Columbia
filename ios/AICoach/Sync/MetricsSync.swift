@@ -26,7 +26,7 @@ struct MetricsBatch: Codable {
 }
 
 final class MetricsSync {
-    private let baseURL = "http://localhost:8000" // Configure as needed
+    private let baseURL = "http://localhost:8002" // Your demo server
     private var pendingMetrics: [MetricData] = []
     private var currentSessionId: String?
     private let batchSize = 10

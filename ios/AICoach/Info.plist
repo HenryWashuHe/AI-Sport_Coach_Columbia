@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>NSCameraUsageDescription</key>
+    <string>AI Coach needs camera access for real-time pose analysis and form correction during workouts.</string>
+    
+    <key>NSHealthShareUsageDescription</key>
+    <string>AI Coach needs access to heart rate data to monitor your workout intensity and provide personalized coaching.</string>
+    
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>AI Coach needs to save workout data to your Health app to track your fitness progress.</string>
+    
+    <key>CFBundleDisplayName</key>
+    <string>AI Coach</string>
+    
+    <key>CFBundleIdentifier</key>
+    <string>com.yourname.aicoach</string>
+    
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>armv7</string>
+    </array>
+    
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+</dict>
+</plist>
