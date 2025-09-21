@@ -1,25 +1,30 @@
-# AI Coach (MVP Bootstrap)
+# AI-Sport_Coach_Columbia
 
-This is the starter scaffold created for Phase 0.
+This is my **personal AI coach project** — software that acts like a trainer:
+- Always-on camera for pose detection
+- Connects to Apple Watch (HR, HRV, sleep, recovery)
+- Gives **real-time cues** (voice/overlay)
+- Adjusts workout + nutrition plan based on progress
 
-## What's here
-- `server/` minimal FastAPI app with a `/health` endpoint
-- `server/docker-compose.yml` for TimescaleDB (Postgres) + Redis
-- `server/requirements.txt` for backend dependencies
-- `.env.example` for backend environment variables
+---
 
-## Quickstart
-```bash
-cd server
-# bring up DB + Redis
-docker compose up -d
+## Stack (Draft)
+**Mobile (iOS)**
+- Swift + SwiftUI (native, HealthKit access)
+- Core ML (on-device pose models)
+- HealthKit + WorkoutKit for Apple Watch sync
+- Real-time audio feedback
 
-# create venv & install deps
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+**Backend**
+- FastAPI (Python) for APIs
+- PostgreSQL + TimescaleDB (metrics storage)
+- Redis + Celery (background jobs + personalization)
+- S3 (model artifacts, exports only)
 
-# run API
-uvicorn app.main:app --reload
-# -> visit http://localhost:8000/health
-```
+**ML**
+- Pose estimation → joint angles → error detection
+- Personalization model tuned to user data
+
+---
+
+## Repo Layout (Draft)
