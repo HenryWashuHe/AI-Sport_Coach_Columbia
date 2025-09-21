@@ -40,3 +40,11 @@ class PlanItem(BaseModel):
 
 class PlanTodayResponse(BaseModel):
     items: List[PlanItem]
+
+class AccountDeleteRequest(BaseModel):
+    user_id: str
+
+class AccountDeleteResponse(BaseModel):
+    user_id: str
+    deleted: bool
+    message: str

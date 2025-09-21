@@ -2,12 +2,17 @@ import Foundation
 import AVFoundation
 import CoreVideo
 
-final class CameraPipeline: NSObject {
+final class CameraPipeline: NSObject, ObservableObject {
     private let session = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "camera.session.queue")
     private var videoOutput = AVCaptureVideoDataOutput()
 
     var pixelBufferHandler: ((CVPixelBuffer, CMTime) -> Void)?
+    
+    // Expose capture session for preview layer
+    var captureSession: AVCaptureSession {
+        return session
+    }
 
     func configure(preferredPosition: AVCaptureDevice.Position = .front) throws {
         session.beginConfiguration()
